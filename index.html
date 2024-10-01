@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet"> <!-- Link to Bungee Spice font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400&display=swap" rel="stylesheet"> <!-- Link to Cinzel font -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #166ac4;
+            color: #dedede;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content */
+            padding: 20px;
+        }
+
+        .frame {
+            max-width: 1200px; /* Set a maximum width for the frame */
+            width: 100%; /* Full width on smaller screens */
+            background-color: #ddd152; /* Background color of the frame */
+            border: 1px solid #26a72e; /* Border for the frame */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            padding: 20px; /* Padding inside the frame */
+            text-align: center; /* Center text in the frame */
+        }
+
+        .content {
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Center items vertically */
+            justify-content: center; /* Center items horizontally */
+            margin-bottom: 20px; /* Add space below content */
+        }
+
+        .content img {
+            margin-right: 20px; /* Space between image and text */
+        }
+
+        .write-area {
+            text-align: center; /* Center text in this area */
+            max-width: 300px; /* Limit width of the text area */
+            border: 2px solid rgb(240, 2, 2); /* Black border around the text */
+            padding: 10px; /* Padding inside the border */
+            border-radius: 5px; /* Rounded corners for the border */
+        }
+
+        .cinzel-uniquifier {
+            font-family: "Cinzel", serif;
+            font-weight: 400; /* Set weight to 400 */
+            color: #000000; /* Set the desired color (change as needed) */
+        }
+
+        .button-container {
+            text-align: center; /* Center the buttons */
+            margin: 20px 0; /* Add margin for spacing */
+        }
+
+        .download-button, .contact-button {
+            background: #166ac4;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 0 10px; /* Add space between buttons */
+        }
+
+        .footer-border {
+            background-color: #ff0000; /* Red border color */
+            height: 15px; /* Height of the border */
+            width: 100%; /* Full width */
+        }
+
+        footer {
+            text-align: center;
+            padding: 5px; /* Reduced padding for the footer */
+            background: #1eb05b;
+            color: #0d0a0a;
+            position: relative; /* Changed to relative for better control */
+            width: 100%;
+            margin-top: 10px; /* Space between footer and red border */
+        }
+
+        /* Custom font styles */
+        .honk-uniquifier {
+            font-family: "Honk", system-ui;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .bungee-spice-regular {
+            font-family: "Bungee Spice", sans-serif;
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="honk-uniquifier">Welcome Folks</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Contact-me.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="frame">
+            <h2 class="honk-uniquifier">Reuben here</h2>
+            <p class="honk-uniquifier">Happy to see you folks here.</p>
+            <div class="content">
+                <img src="Reubenimage.jpeg" alt="My photo" width="400"> <!-- Set image width as needed -->
+                <div class="write-area">
+                    <p class="cinzel-uniquifier">''I have followed my heart. I have trusted my inner voice to lead me even when there were easier roads''</p>
+                </div>
+            </div>
+
+            <!-- Button Container at the Bottom -->
+            <div class="button-container">
+                <a href="REUBENresume.pdf" class="download-button" download>Download my CV</a>
+                <a href="Contact-me.html" class="contact-button">Contact Me</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Red Border before Footer -->
+    <div class="footer-border"></div>
+    
+    <footer>
+        <p> All rights reserved @ 2024</p>
+    </footer>
+</body>
+</html>

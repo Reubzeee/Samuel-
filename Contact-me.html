@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ddd152;
+        }
+
+        header {
+            background:#166ac4;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center; /* Center the headings */
+            margin: 20px 0; /* Add margin for spacing */
+        }
+
+        .map-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        iframe {
+            width: 100%; /* Set the width to 100% */
+            max-width: 1000px; /* Match the form's max width */
+            height: 450px;
+            border: 0;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 20px 0; /* Added margin for spacing */
+        }
+
+        .contact-button {
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        form {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap */
+        }
+
+        .form-group {
+            flex: 1 1 45%; /* Take up about 45% of the width */
+            margin: 10px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #720b0b;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #f44343;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px; /* Add margin for spacing */
+        }
+
+        /* Centering the Send button */
+        .form-submit {
+            text-align: center;
+            width: 100%; /* Take full width of form */
+            margin-top: 20px; /* Add margin for spacing */
+        }
+
+        .thank-you-message {
+            display: none; /* Hidden by default */
+            text-align: center;
+            margin: 20px 0;
+            color: #28a745; /* Green color for success */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #f44343;
+            color: #fff;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Me</h1> <!-- Changed from "Contact Us" to "Contact Me" -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Find Us Here</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.184132755555!2d-73.98554262429207!3d40.757974693273816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sin!4v1727783280661!5m2!1sen!2sin" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- Buttons Section Below the Map -->
+        <div class="button-container">
+            <button class="contact-button" onclick="alert('Call me: +918892563901')">Call Me</button>
+            <button class="contact-button" onclick="alert('Email me: reubensamuel@gmail.com')">Email Me</button>
+            <button class="contact-button" onclick="alert('Meet me @ Times Square')">Meet Me</button>
+        </div>
+
+        <h2>Feel Free To Connect With Us</h2>
+        <form id="contact-form" onsubmit="return handleSubmit(event);">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <div class="form-submit">
+                <button type="submit">Send</button>
+            </div>
+        </form>
+
+        <!-- Thank You Message -->
+        <div class="thank-you-message" id="thank-you-message">
+            Thank you for connecting with us! I'll get back to you soon as possible.
+        </div>
+    </main>
+    
+    <footer>
+        <p> All rights reserved @ 2024</p>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+            document.getElementById('contact-form').reset(); // Reset the form fields
+            document.getElementById('thank-you-message').style.display = 'block'; // Show the thank you message
+            return false; // Prevent any further submission
+        }
+    </script>
+</body>
+</html>
+
